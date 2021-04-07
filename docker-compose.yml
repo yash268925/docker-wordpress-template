@@ -32,6 +32,15 @@ services:
     volumes:
       - wp-data:/var/www/html
 
+  cli:
+    image: wordpress:cli
+    env_file: .env
+    depends_on:
+      - app
+      - db
+    volumes:
+      - wp-data:/var/www/html
+
 volumes:
   db-data:
     driver_opts:

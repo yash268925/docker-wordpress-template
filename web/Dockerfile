@@ -1,4 +1,4 @@
 FROM nginx:1.13.5-alpine
 
-# ルートディレクトリを作成
+COPY ./default.conf /etc/nginx/conf.d/default.conf
 RUN mkdir -p /var/www/html
